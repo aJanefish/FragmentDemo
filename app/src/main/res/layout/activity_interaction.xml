@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.InteractionActivity">
+
+    <LinearLayout
+        android:id="@+id/activity_interaction_ll"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:orientation="horizontal">
+
+        <fragment
+            android:id="@+id/activity_interaction_left"
+            android:name="com.example.fragmentdemo.fragment.LeftFragment"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <!--Fragment的容器-->
+        <FrameLayout
+            android:id="@+id/activity_interaction_fl"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <Button
+        android:text="按钮"
+        android:onClick="interactionActivityTest"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@id/activity_interaction_ll"
+        android:layout_height="wrap_content"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
