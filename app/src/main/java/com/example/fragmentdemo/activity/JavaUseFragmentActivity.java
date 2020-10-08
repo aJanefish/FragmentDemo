@@ -15,6 +15,8 @@ import com.example.fragmentdemo.fragment.RightFragment;
 
 public class JavaUseFragmentActivity extends AppCompatActivity {
 
+    boolean flag = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,17 +26,26 @@ public class JavaUseFragmentActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                replaceFragment(new AnotherRightFragment());
-
+                if (flag) {
+                    replaceFragment(new AnotherRightFragment());
+                } else {
+                    replaceFragment(new RightFragment());
+                }
+                flag = !flag;
             }
         });
-        replaceFragment(new RightFragment());
     }
 
     private void replaceFragment(Fragment fragment) {
+        //获取FragmentManager
         FragmentManager fragmentManager = getSupportFragmentManager();
+        //开启一个事务
         FragmentTransaction beginTransaction = fragmentManager.beginTransaction();
+        //向容器添加或者替换Fragment
         beginTransaction.replace(R.id.activity_java_use_fragment_fl, fragment);
+        //加入返回栈
+        beginTransaction.addToBackStack(null);
+        //提交事务
         beginTransaction.commit();
     }
 }

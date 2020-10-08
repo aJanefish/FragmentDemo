@@ -14,9 +14,10 @@
         android:layout_height="match_parent"
         android:layout_weight="1" />
 
+    <!--Fragment的容器-->
     <FrameLayout
         android:id="@+id/activity_java_use_fragment_fl"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1" />
-</LinearLayout><!--</androidx.constraintlayout.widget.ConstraintLayout>-->
+</LinearLayout>
