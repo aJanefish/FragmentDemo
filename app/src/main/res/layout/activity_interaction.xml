@@ -28,10 +28,18 @@
     </LinearLayout>
 
     <Button
-        android:text="按钮"
-        android:onClick="interactionActivityTest"
+        android:id="@+id/activity_interaction_button"
         android:layout_width="match_parent"
-        app:layout_constraintTop_toBottomOf="@id/activity_interaction_ll"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:onClick="interactionActivityTest"
+        android:text="按钮"
+        app:layout_constraintTop_toBottomOf="@id/activity_interaction_ll" />
+
+    <TextView
+        android:id="@+id/activity_interaction_des"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="按钮"
+        app:layout_constraintTop_toBottomOf="@id/activity_interaction_button" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
