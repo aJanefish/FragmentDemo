@@ -11,12 +11,12 @@ import androidx.fragment.app.Fragment;
 
 import com.example.fragmentdemo.R;
 
-public class LeftFragment extends Fragment {
+public class LeftFragment extends BaseFragment {
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        //return super.onCreateView(inflater, container, savedInstanceState);
+        super.onCreateView(inflater, container, savedInstanceState);
         return inflater.inflate(R.layout.left_fragment, container, false);
     }
 }

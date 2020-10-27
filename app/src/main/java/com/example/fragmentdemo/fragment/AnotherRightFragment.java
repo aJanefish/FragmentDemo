@@ -16,11 +16,12 @@ import androidx.fragment.app.FragmentActivity;
 import com.example.fragmentdemo.R;
 import com.example.fragmentdemo.activity.InteractionActivity;
 
-public class AnotherRightFragment extends Fragment {
+public class AnotherRightFragment extends BaseFragment {
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        //return super.onCreateView(inflater, container, savedInstanceState);
+        super.onCreateView(inflater, container, savedInstanceState);
         return inflater.inflate(R.layout.another_right_fragment, container, false);
     }
 

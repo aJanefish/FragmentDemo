@@ -9,6 +9,7 @@ import android.view.View;
 import com.example.fragmentdemo.activity.FragmentUseActivity;
 import com.example.fragmentdemo.activity.InteractionActivity;
 import com.example.fragmentdemo.activity.JavaUseFragmentActivity;
+import com.example.fragmentdemo.activity.LifeCycleActivity;
 import com.example.fragmentdemo.activity.XmlActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -33,8 +34,11 @@ public class MainActivity extends AppCompatActivity {
         startActivity(new Intent(this, InteractionActivity.class));
     }
 
+    public void lifeCycleTest(View view) {
+        startActivity(new Intent(this, LifeCycleActivity.class));
+    }
+
     public void fragmentUseTest(View view) {
         startActivity(new Intent(this, FragmentUseActivity.class));
-
     }
 }

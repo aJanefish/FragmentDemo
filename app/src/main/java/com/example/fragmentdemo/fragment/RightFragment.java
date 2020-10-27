@@ -16,14 +16,14 @@ import androidx.fragment.app.FragmentActivity;
 import com.example.fragmentdemo.R;
 import com.example.fragmentdemo.activity.InteractionActivity;
 
-public class RightFragment extends Fragment {
+public class RightFragment extends BaseFragment {
 
     private OnMsgChangeListener msgChangeListener;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        //return super.onCreateView(inflater, container, savedInstanceState);
+        super.onCreateView(inflater, container, savedInstanceState);
         return inflater.inflate(R.layout.right_fragment, container, false);
     }
 
